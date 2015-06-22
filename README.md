@@ -19,6 +19,11 @@ You will not need any fancy libraries to compile this. A C89 compliant C
 compiler and a decent UNIX stdlib will be enough to compile this using the
 provided Makefile.
 
+## Example
+
+You can run the program on the provided example text file to see that the
+program correctly matches the tags.
+
 ## Copyright
 
 This program is brought to you under WTFPL. For further informations please
