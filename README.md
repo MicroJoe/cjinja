@@ -24,6 +24,8 @@ provided Makefile.
 You can run the program on the provided example text file to see that the
 program correctly matches the tags.
 
+	./cjinja < example.txt
+
 ## Copyright
 
 This program is brought to you under WTFPL. For further informations please
