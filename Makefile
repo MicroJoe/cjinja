@@ -1,4 +1,12 @@
-all: cjinja
+EXEC=cjinja
+CFLAGS+=-pedantic -std=c89 -Wall -Wextra
 
-cjinja: cjinja.c
-	$(CC) -o cjinja cjinja.c
+.PHONY: clean
+
+all: $(EXEC)
+
+$(EXEC): cjinja.c
+	$(CC) $(CFLAGS) -o cjinja cjinja.c
+
+clean:
+	rm -f $(EXEC)

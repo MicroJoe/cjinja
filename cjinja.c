@@ -1,9 +1,14 @@
+/* Declare that we want <stdio.h> to use getline on FreeBSD */
+#ifdef __FreeBSD__
+#define _WITH_GETLINE
+#endif
+
 #include <stdio.h>
 #include <stdlib.h>
 
 #include <string.h>
 
-#define IDENT_SIZE     50
+#define IDENT_SIZE  50
 #define DELIM_LEFT  '{'
 #define DELIM_RIGHT '}'
 
@@ -62,7 +67,7 @@ retry:
 	}
 }
 
-int main(int argc, char **argv) {
+int main(void) {
 	char *line;
 	size_t n;
 
