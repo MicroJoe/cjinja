@@ -1,6 +1,9 @@
-/* Declare that we want <stdio.h> to use getline on FreeBSD */
 #ifdef __FreeBSD__
+/* Declare that we want <stdio.h> to use getline on FreeBSD */
 #define _WITH_GETLINE
+#else
+/* Declare that we want <stdio.h> to use getline from glibc on Linux */
+#define _GNU_SOURCE
 #endif
 
 #include <stdio.h>
